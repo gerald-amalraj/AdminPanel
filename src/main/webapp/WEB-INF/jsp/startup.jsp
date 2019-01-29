@@ -45,6 +45,7 @@
 	        url: "LoginServlet",
 	        data: { userName : uname, password:passwrd  }
 	      }).done(function( msg ) {
+			  alert("================== "+msg);
 	       if(msg == "1"){
 	    	   document.location.href=ctxPath+'/trackerDetails';
 	       }else if(msg == "2"){
