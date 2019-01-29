@@ -113,7 +113,6 @@
        var markers = ${map.coordinates}
       
         window.onload = function () { 
-        	 alert(markers.length);
            if(markers.length != 0){
         	 $("#map_section").show();	
         	   var mapOptions = {
