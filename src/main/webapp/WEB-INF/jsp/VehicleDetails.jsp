@@ -131,7 +131,7 @@ $(document).ready(function(){
                 <div class="box-content">
                     <div class="bs-example">
     
-   <form:form method="post" action="/DevTracker/confirmVehicleData" modelAttribute="vehicleDetails" class="form-horizontal">    
+   <form:form method="post" action="./confirmVehicleData" modelAttribute="vehicleDetails" class="form-horizontal">    
         
          <div class="form-group">
             <label for="vehicleNumber" class="control-label col-xs-2"> Vehicle Number </label>

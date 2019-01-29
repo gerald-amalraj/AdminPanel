@@ -41,7 +41,7 @@ public class TrackerDetailsController {
 		if(pageRedirect > 0){			
 			resultMsg.setErrorMessage("IMEI number "+trackerDetail.getImei()+" has already been registerd!");
 			resultMsg.setShowResult("0");
-			resultMsg.setPageUrl("/DevTracker/trackerDetails");
+			resultMsg.setPageUrl("./trackerDetails");
 			return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 		}else{			
 			return new ModelAndView("ConfirmTrackerDetails", "map", null);
@@ -62,7 +62,7 @@ public class TrackerDetailsController {
 			resultMsg.setErrorMessage("IMEI number "+trackerDetail.getImei()+" has not been registerd!");
 			resultMsg.setShowResult("0");			
 		}
-		resultMsg.setPageUrl("/DevTracker/trackerDetails");
+		resultMsg.setPageUrl("./trackerDetails");
 		return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 	}
 

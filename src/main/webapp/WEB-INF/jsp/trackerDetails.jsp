@@ -176,7 +176,7 @@ $(document).ready(function(){
                 <div class="box-content">
                     <div class="bs-example">
    			
-			<form:form method="post" action="/DevTracker/confirmDetails" modelAttribute="trackerDetail" class="form-horizontal" >
+			<form:form method="post" action="./confirmDetails" modelAttribute="trackerDetail" class="form-horizontal" >
         <div class="form-group">
             <label for="inputIMEI" class="control-label col-xs-2">IMEI Number</label>
             <div class="col-xs-5">

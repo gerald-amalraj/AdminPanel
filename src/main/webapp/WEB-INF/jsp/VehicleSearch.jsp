@@ -158,9 +158,10 @@
         
         $(document).ready(function() { 
          $("#vehicleSearch").on('click', function(){
+		var ctxPath = "${pageContext.request.contextPath}";
         var vehicleNumber = $("#vehicleNumber").val(); 
         if(vehicleNumber != ''){
-        	document.location.href='/DevTracker/locateVehicle?vehicleNumber='+ vehicleNumber;
+        	document.location.href=ctxPath+'/locateVehicle?vehicleNumber='+ vehicleNumber;
         }else{
         	 alert("Vehicle number cannot be empty!");
         }

@@ -55,7 +55,7 @@
 	    	   document.location.href=ctxPath+'/agent';
 	       }else if(msg == "false"){
 	    	   $("#login_fail").show(); 
-	    	   //document.location.href='/DevTracker/startup';
+	    	   //document.location.href=ctxPath+'/startup';
 	       }
 	      });  
 		   
@@ -63,7 +63,7 @@
     	    	 
     	 $("#locateVehicle").on('click', function(){
     		var invoice = $("#searchInvoice").val(); 
-    		 
+    		var ctxPath = "${pageContext.request.contextPath}";
     		var dataString = "searchInvoice="+invoice;
     		  if(invoice != ''){ 
     			  document.location.href=ctxPath+'/trackInMap?searchInvoice='+invoice;
@@ -76,7 +76,7 @@
     		            success: function( data) {
     		               alert(data.success);
     		                 if(data.success ){  
-    		                	 document.location.href='/DevTracker/Map';
+    		                	 document.location.href=ctxPath+'/Map';
     		                 }else {
     		                     $("#ajaxResponse").html("<div><b>Invoice doesn't exist!</b></div>");
     		                 }

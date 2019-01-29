@@ -26,23 +26,23 @@
     	 
 	   var uname = $("#login_username").val(); 
 	   var passwrd = $("#password").val(); 
-	  
+	   var ctxPath = "${pageContext.request.contextPath}";
 	   $.ajax({
 	        type: "POST",
 	        url: "LoginServlet",
 	        data: { userName : uname, password:passwrd  }
 	      }).done(function( msg ) {
 	       if(msg == "1"){
-	    	   document.location.href='/DevTracker/trackerDetails';
+	    	   document.location.href=ctxPath+'/trackerDetails';
 	       }else if(msg == "2"){
-	    	   document.location.href='/assignVehicle';
+	    	   document.location.href=ctxPath+'/assignVehicle';
 	       }else if(msg == "3"){
-	    	   document.location.href='/DevTracker/driverDetails';
+	    	   document.location.href=ctxPath+'/driverDetails';
 	       }else if(msg == "4"){
-	    	   document.location.href='/DevTracker/agent';
+	    	   document.location.href=ctxPath+'/agent';
 	       }else if(msg == "false"){
 	    	   $("#login_fail").show(); 
-	    	   //document.location.href='/DevTracker/startup';
+	    	   //document.location.href=ctxPath+'/startup';
 	       }
 	      });  
 		   
@@ -50,8 +50,9 @@
     	    	 
     	 $("#locateVehicle").on('click', function(){
     		 var invoice = $("#searchInvoice").val(); 
+			 var ctxPath = "${pageContext.request.contextPath}";
     		dataString = "searchInvoice=" + invoice;	
-    		document.location.href='/DevTracker/trackInMap?searchInvoice='+ invoice;
+    		document.location.href=ctxPath+'/trackInMap?searchInvoice='+ invoice;
   		   
     		      
     	 
@@ -80,7 +81,7 @@
                          <!-- <div class="collapse navbar-collapse pull-right">
                               
                               <form class="navbar-form pull-left">
-                                    <a class="btn btn-primary" href="/DevTracker/payForPlay" >Pay for Play</a>
+                                    <a class="btn btn-primary" href="./payForPlay" >Pay for Play</a>
                                 </form>
                               
                                 <form class="navbar-form pull-left">

@@ -52,7 +52,7 @@ public class DriverDetailsController {
 			resultMsg.setErrorMessage("Vehicle number "+driverDetails.getVehicleNumber()+" and driver "+driverDetails.getDriverName()+"has not been associated!");
 			resultMsg.setShowResult("0");			
 		}
-		resultMsg.setPageUrl("/DevTracker/driverDetails");
+		resultMsg.setPageUrl("./driverDetails");
 		return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 	}
 }

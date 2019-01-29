@@ -61,7 +61,7 @@ public class HomePageController {
 		ResultBean resultMsg = new ResultBean();
 		resultMsg.setErrorMessage("Invoice Number "+invoiceNumber+" is not available to be tracked. Check your invoice number!");
 		resultMsg.setShowResult("0");
-		resultMsg.setPageUrl("/DevTracker/startup");
+		resultMsg.setPageUrl("./startup");
 		return new ModelAndView("ResultPage", "resultMsg", resultMsg);		
 		}else{
 		JSONArray jObj = homePageDao.retrieveCoordinates(invoiceData);		
@@ -91,7 +91,7 @@ public class HomePageController {
 			ResultBean resultMsg = new ResultBean();
 			resultMsg.setErrorMessage("Vehicle Number "+payForPlay.getVehicleNumber()+" is not available to be tracked. Check your vehicle number!");
 			resultMsg.setShowResult("0");
-			resultMsg.setPageUrl("/DevTracker/payForPlay");
+			resultMsg.setPageUrl("./payForPlay");
 			return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 		}else{
 			payForPlay.setImeiNumber(imeiNumber);

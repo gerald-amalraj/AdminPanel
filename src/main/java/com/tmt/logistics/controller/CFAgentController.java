@@ -43,7 +43,7 @@ AgentDao agentDao;
 		 ResultBean resultMsg = new ResultBean();
 		 resultMsg.setErrorMessage("Invoice Number "+agent.getInvoiceNumber()+" is already been registered!");
 		 resultMsg.setShowResult("0");
-		 resultMsg.setPageUrl("/DevTracker/agent");
+		 resultMsg.setPageUrl("./agent");
 		 return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 	 }else{
 			String fromAddress = agent.getFromAddress().replaceAll(",", "").replaceAll(" ", "+");
@@ -72,7 +72,7 @@ AgentDao agentDao;
 			if(pageRedirect == 1){
 				resultMsg.setSuccessMessage("Invoice number "+agent.getInvoiceNumber()+" has been mapped successfully with vehicle number "+agent.getVehicleNumber()+"!");
 				resultMsg.setShowResult("1");
-				resultMsg.setPageUrl("/DevTracker/agent");
+				resultMsg.setPageUrl("./agent");
 				return "redirect:/agent?id="+agent.getParent_id();
 			}else{
 				return "redirect:/resultPage?invoiceNumber="+agent.getInvoiceNumber();
@@ -92,7 +92,7 @@ AgentDao agentDao;
 	    	resultMsg.setErrorMessage("Invoice number "+invoiceNumber+" has not been mapped successfully!");
 		 }
 	    resultMsg.setShowResult("0");
-	    resultMsg.setPageUrl("/DevTracker/agent");
+	    resultMsg.setPageUrl("./agent");
 	    return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 		} 
 }

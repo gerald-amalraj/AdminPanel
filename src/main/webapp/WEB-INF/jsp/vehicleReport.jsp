@@ -52,7 +52,8 @@
 <script type="text/javascript">
 
 /* $(document).ready(function() {	 
-	 $('a').on('click', function() {		 		 
+	 $('a').on('click', function() {
+     var ctxPath = "${pageContext.request.contextPath}";		 
 		  dataString = "detachId=" + this.id;		  
 		   $.ajax({
 		        type: "POST",
@@ -63,7 +64,7 @@
 	            success: function( data, textStatus, jqXHR) {
 	                //our country code was correct so we have some information to display
 	                 if(data.success){  
-	                	document.location.href='/DevTracker/vehicleReport';
+	                	document.location.href=ctxPath+'/vehicleReport';
 	                 } 
 	                 //display error message
 	                 else {

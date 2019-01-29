@@ -45,7 +45,7 @@ AgentDao agentDao;
 			 ResultBean resultMsg = new ResultBean();
 			 resultMsg.setErrorMessage("Vehicle Number "+vehicleNumber+" is un-available to track!");
 			 resultMsg.setShowResult("0");
-			 resultMsg.setPageUrl("/DevTracker/vehicleSearch");
+			 resultMsg.setPageUrl("./vehicleSearch");
 			 return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 			}else{
 				JSONArray jObj = vehicleSearchDao.retrieveVehicleData(imeiNumber);				

@@ -47,7 +47,7 @@ public class CreateLoginController {
 				resultMsg.setErrorMessage("Login creation failed!");
 				resultMsg.setShowResult("0");			
 			}		
-			resultMsg.setPageUrl("/DevTracker/CreateLogin");
+			resultMsg.setPageUrl("./CreateLogin");
 			return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 		}	
 	

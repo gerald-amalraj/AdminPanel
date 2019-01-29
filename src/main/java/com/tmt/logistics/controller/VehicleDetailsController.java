@@ -52,7 +52,7 @@ public class VehicleDetailsController {
 		    resultMsg.setErrorMessage("Vehicle Number "+vehicleDetails.getVehicleNumber()+" is already been registered!");
 		    resultMsg.setShowResult("0");
 	 	}
-	 	resultMsg.setPageUrl("/DevTracker/vehicleDetails");
+	 	resultMsg.setPageUrl("./vehicleDetails");
 	 	return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 	}
  
