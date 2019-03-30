@@ -44,12 +44,8 @@ public class LoginServlet  implements HttpRequestHandler {
 	    HttpSession session=request.getSession();  
         session.setAttribute("username",loginData.getUserName());  
         session.setAttribute("handler_id", loginData.getHandler_id());
-        session.setAttribute("role_id", loginData.getRole_id());
-       
-       //setting session to expiry in 10 mins
-       // session.setMaxInactiveInterval(10*60);
+        session.setAttribute("role_id", loginData.getRole_id());       
 	    }
-	    //response.setContentType("text/plain");
         response.getWriter().write(String.valueOf(loginData != null  ? loginData.getRole_id() : false));
 		
 	}
