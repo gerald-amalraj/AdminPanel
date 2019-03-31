@@ -96,3 +96,4 @@ AgentDao agentDao;
 	    return new ModelAndView("ResultPage", "resultMsg", resultMsg);
 		} 
 }
+
