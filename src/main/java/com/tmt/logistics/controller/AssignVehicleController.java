@@ -31,7 +31,6 @@ public class AssignVehicleController {
 		AssignVehicle assignVehicle = assignVehicleDao.retrieveListData(assgnVehicle);
 
 		Map<String, List> map = new HashMap<String, List>();
-		// map.put("custList", assignVehicle.getCustName());
 		map.put("userList", assignVehicle.getUserList());
 		map.put("vehicleList", Arrays.asList(Arrays.toString(assignVehicle.getVehicleNumber().toArray())
 				.replace("[", "").replace("]", "").toUpperCase().split(",")));
